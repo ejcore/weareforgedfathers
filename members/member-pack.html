@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Forged Fathers Member Starter Pack</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#0b0c0e; --bg2:#14161a; --card:#1a1d23;
+  --steel:#c5c9d0; --steel-b:#e8eaee; --muted:#8a909c;
+  --gold:#b98a4f; --gold-b:#d4a86a; --gold-d:#8a6330;
+  --ink:#16181c; --ink2:#3a3f48; --paper:#ffffff; --paper2:#f3f4f6; --rule:#d9dce1;
+}
+@page{ size: Letter; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+body{ font-family:Inter, system-ui, sans-serif; color:var(--ink); font-size:10.4pt; line-height:1.46; background:#555; }
+.page{ width:8.5in; height:11in; position:relative; overflow:hidden; background:var(--paper); break-after:page; margin:0 auto; }
+.page:last-child{ break-after:auto; }
+.d{ font-family:"Bebas Neue", Impact, sans-serif; font-weight:400; letter-spacing:.03em; }
+
+/* cover */
+.cover{ background:#000 url(mountain-bg.jpg) center/cover no-repeat; color:var(--steel-b); text-align:center; }
+.cover::before{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 35%,rgba(0,0,0,.55) 62%,rgba(0,0,0,.92) 100%); }
+.cover > *{ position:relative; }
+.cover .frame{ position:absolute; inset:.35in; border:1px solid rgba(212,168,106,.55); }
+.cover img.logo{ width:2.3in; height:2.3in; margin-top:.75in; object-fit:cover; border-radius:50%; border:2px solid rgba(212,168,106,.7); box-shadow:0 18px 50px rgba(0,0,0,.7); }
+.cover .eyebrow{ margin-top:2.55in; font-size:10pt; font-weight:700; letter-spacing:.32em; text-transform:uppercase; color:var(--gold-b); }
+.cover h1{ font-family:"Bebas Neue", sans-serif; font-weight:400; font-size:64pt; line-height:.92; letter-spacing:.03em; margin-top:.08in; text-shadow:0 4px 24px rgba(0,0,0,.8); }
+.cover h1 span{ color:var(--gold-b); }
+.cover .sub{ font-size:12.5pt; color:var(--steel); margin-top:.12in; }
+.cover .sub b{ color:#fff; }
+.cover .inside{ display:flex; justify-content:center; gap:10px; margin-top:.22in; }
+.cover .inside span{ border:1px solid var(--gold); color:var(--gold-b); font-size:9pt; font-weight:700; letter-spacing:.2em; text-transform:uppercase; padding:6px 14px; background:rgba(0,0,0,.4); }
+.cover .cfoot{ position:absolute; left:0; right:0; bottom:.62in; font-size:9pt; letter-spacing:.16em; text-transform:uppercase; color:var(--steel); }
+.cover .cfoot b{ color:var(--gold-b); }
+
+/* band */
+.band{ background:#000 url(mountain-wide.jpg) center 55%/cover no-repeat; color:var(--steel-b); padding:.4in .65in .26in; position:relative; }
+.band::before{ content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(5,5,6,.93) 0%,rgba(5,5,6,.78) 60%,rgba(5,5,6,.55) 100%); }
+.band > *{ position:relative; }
+.band::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:3px; background:linear-gradient(90deg,var(--gold-b),var(--gold-d) 60%, transparent); }
+.band .kicker{ font-size:8.5pt; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-b); display:flex; align-items:center; gap:.6em; }
+.band .kicker::before{ content:""; width:24px; height:1px; background:var(--gold); }
+.band h2{ font-family:"Bebas Neue", sans-serif; font-weight:400; font-size:35pt; line-height:1; letter-spacing:.03em; margin-top:5px; }
+.band h2 span{ color:var(--gold-b); }
+.band p{ color:var(--steel); font-size:10.8pt; margin-top:6px; max-width:5.9in; }
+.band img.mark{ position:absolute; right:.65in; top:.36in; width:.8in; height:.8in; object-fit:cover; border-radius:50%; border:1px solid rgba(212,168,106,.6); }
+
+.body{ padding:.26in .65in .7in; }
+h3{ font-family:"Bebas Neue", sans-serif; font-weight:400; font-size:20pt; letter-spacing:.04em; color:var(--ink); margin:0 0 5px; display:flex; align-items:center; gap:10px; }
+h3 .n{ display:inline-flex; width:25px; height:25px; border-radius:3px; background:var(--gold); color:#fff; font-size:13pt; align-items:center; justify-content:center; padding-top:2px; }
+h4{ font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:15.5pt; letter-spacing:.04em; color:var(--ink); margin-bottom:3px; }
+p{ margin-bottom:8px; color:var(--ink2); }
+p.lead{ font-size:11.8pt; color:var(--ink); }
+strong,b{ color:var(--ink); }
+.section{ margin-bottom:.2in; }
+ul.check{ list-style:none; }
+ul.check li{ position:relative; padding-left:22px; margin-bottom:6px; color:var(--ink2); }
+ul.check li::before{ content:""; position:absolute; left:2px; top:.5em; width:8px; height:8px; background:var(--gold); transform:rotate(45deg); }
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:.2in; }
+.grid3{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:.15in; }
+.grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:.12in; }
+.box{ background:var(--paper2); border-left:4px solid var(--gold); padding:11px 15px; border-radius:2px; margin:6px 0 12px; }
+.box p:last-child{ margin-bottom:0; }
+.quote{ background:var(--bg2); color:var(--steel-b); padding:15px 20px; border-radius:4px; margin:10px 0 14px; }
+.quote p{ color:var(--steel-b); font-size:12pt; margin:0; }
+.quote .who{ color:var(--gold-b); font-size:8.5pt; letter-spacing:.18em; text-transform:uppercase; font-weight:700; margin-top:6px; }
+.tile{ border:1px solid var(--rule); border-top:3px solid var(--gold); padding:11px 12px; border-radius:2px; }
+.tile .t{ font-family:"Bebas Neue",sans-serif; font-size:15.5pt; letter-spacing:.04em; color:var(--ink); line-height:1.05; margin-bottom:3px; }
+.tile .big{ font-family:"Bebas Neue",sans-serif; font-size:30pt; line-height:1; color:var(--gold-d); }
+.tile p{ font-size:9.8pt; margin:0; }
+.dark{ background:var(--bg); color:var(--steel-b); border-radius:6px; padding:16px 18px; }
+.dark h4{ color:var(--gold-b); }
+.dark p,.dark li,.dark ul.check li{ color:var(--steel); }
+.dark b{ color:#fff; }
+table{ width:100%; border-collapse:collapse; font-size:10pt; margin-top:4px; }
+th{ background:var(--bg2); color:var(--steel-b); text-align:left; font-weight:700; font-size:8.3pt; letter-spacing:.1em; text-transform:uppercase; padding:7px 9px; }
+td{ padding:7px 9px; border-bottom:1px solid var(--rule); color:var(--ink2); vertical-align:top; }
+tr:nth-child(even) td{ background:#fafafb; }
+.write{ border-bottom:1px solid #b9bec6; height:.3in; }
+.foot{ position:absolute; left:.65in; right:.65in; bottom:.32in; display:flex; justify-content:space-between; font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); border-top:1px solid var(--rule); padding-top:8px; }
+.foot b{ color:var(--gold-d); }
+.groc h4{ display:flex; justify-content:space-between; align-items:baseline; border-bottom:2px solid var(--gold); padding-bottom:3px; margin-bottom:6px; }
+.groc h4 small{ font-family:Inter,sans-serif; font-size:8pt; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.groc ul{ list-style:none; }
+.groc li{ display:flex; gap:9px; align-items:center; padding:4px 0; border-bottom:1px dashed var(--rule); font-size:10.4pt; color:var(--ink2); }
+.groc li::before{ content:""; flex:0 0 12px; height:12px; border:1.5px solid var(--gold-d); border-radius:2px; }
+.groc li i{ font-style:normal; color:var(--muted); font-size:9pt; }
+.meal{ display:grid; grid-template-columns:1.15in 1fr; gap:12px; padding:10px 0; border-bottom:1px solid var(--rule); }
+.meal .k{ font-family:"Bebas Neue",sans-serif; font-size:19pt; color:var(--gold-d); line-height:1; }
+.meal p{ margin:0; }
+.hand{ text-align:center; }
+.hand .big{ font-family:"Bebas Neue",sans-serif; font-size:24pt; color:var(--gold-d); line-height:1; }
+.hand .t{ font-weight:800; font-size:10.5pt; color:var(--ink); margin:2px 0; }
+.hand p{ font-size:9.4pt; margin:0; }
+.code{ font-family:ui-monospace,Menlo,Consolas,monospace; background:var(--bg); color:var(--steel-b); border-radius:6px; padding:14px 16px; font-size:9.6pt; line-height:1.65; white-space:pre-wrap; }
+.code b{ color:var(--gold-b); }
+.ph{ background:#fff4df; border:1.5px dashed var(--gold-d); color:#6b4a1f; font-weight:700; padding:2px 6px; border-radius:3px; }
+.week{ width:100%; border-collapse:collapse; font-size:9.4pt; }
+.week th{ text-align:center; padding:6px 4px; }
+.week th:first-child{ text-align:left; }
+.week td{ height:.32in; border:1px solid var(--rule); text-align:center; }
+.week td:first-child{ text-align:left; font-weight:700; color:var(--ink); width:1.9in; padding-left:8px; }
+</style>
+</head>
+<body>
+
+<!-- 01 COVER -->
+<section class="page cover">
+  <div class="frame"></div>
+  <img class="logo" src="logo-web.jpg" alt="Forged Fathers" />
+  <div class="eyebrow">Forged Fathers · Member Starter Pack</div>
+  <h1>Iron Sharpens <span>Iron</span></h1>
+  <div class="sub">Training, nutrition and your grocery list. Coached by <b>Will Carter</b>.</div>
+  <div class="inside"><span>Training</span><span>Nutrition</span><span>Grocery list</span></div>
+  <div class="cfoot"><b>weareforgedfathers</b> · @willcarternlf</div>
+</section>
+
+<!-- 02 MISSION -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Start here</div>
+    <h2>The Forged Fathers <span>Mission</span></h2>
+    <p>Be the best version of yourself for your family.</p>
+  </div>
+  <div class="body">
+    <div class="section">
+      <p class="lead">With this program, the mission is to help fathers be the best version of themselves for their family. We're here to build strength, fitness, discipline, consistency and hold each other accountable.</p>
+      <p>This isn't about perfection. This is about understanding the season of life you're in and doing what you can, where you are, with what you have.</p>
+      <div class="quote"><p>Iron sharpens Iron. The goal of this group is to lean on one another when motivation is lacking or you feel like you're struggling.</p><div class="who">Will Carter</div></div>
+    </div>
+
+    <div class="section">
+      <h3><span class="n">1</span>Your week at a glance</h3>
+      <p>Your program is based on 3 full body workouts a week that take 30 to 60 minutes. Speed up and shorten rest periods depending on the time you have.</p>
+      <div class="grid4" style="margin-top:8px">
+        <div class="tile"><div class="big">3x</div><div class="t">Full body sessions</div><p>Resistance training, delivered in TrainHeroic.</p></div>
+        <div class="tile"><div class="big">8-12k</div><div class="t">Steps per day</div><p>Walks count. Get them in where you can.</p></div>
+        <div class="tile"><div class="big">15-30</div><div class="t">Minutes with the kids</div><p>Active time with your kids, 3 to 5 times a week.</p></div>
+        <div class="tile"><div class="big">+</div><div class="t">Any extra hobbies</div><p>Whatever you have time for. It all adds up.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3><span class="n">2</span>How the program runs</h3>
+      <div class="grid2">
+        <ul class="check">
+          <li><b>Workouts in TrainHeroic.</b> Your training lives in the TrainHeroic app. Open it, follow the session, log your sets.</li>
+          <li><b>WhatsApp group.</b> The expectation is to share wins, struggles, proud moments and to lean on one another.</li>
+          <li><b>Weekly check-ins.</b> Weigh-in, pictures and compliance to the plan, sent to me.</li>
+        </ul>
+        <ul class="check">
+          <li><b>Nutrition.</b> Simple targets to start. Macros if and when you're ready.</li>
+          <li><b>Group session.</b> At the end of the 4 weeks we train together, and you can bring your kids (as long as they're old enough to work out safely).</li>
+          <li><b>MyFitnessPal.</b> The app I recommend for tracking food when you get there.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>02</b></div>
+</section>
+
+<!-- 03 STARTING ASSESSMENT -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Day one</div>
+    <h2>Starting <span>Assessment</span></h2>
+    <p>In order to track progression, I need you to weigh yourself, take photos and write down your goals.</p>
+  </div>
+  <div class="body">
+    <div class="section">
+      <h3><span class="n">1</span>Your starting point</h3>
+      <div class="grid3">
+        <div class="tile"><div class="t">Weigh in</div><p>Same time each week. First thing in the morning after the bathroom works best.</p><div class="write" style="margin-top:8px"></div><p style="font-size:8.5pt;color:var(--muted)">Starting weight / date</p></div>
+        <div class="tile"><div class="t">Take photos</div><p>Front, side and back. Same spot, same lighting, every check-in.</p><div class="write" style="margin-top:8px"></div><p style="font-size:8.5pt;color:var(--muted)">Photos taken (date)</p></div>
+        <div class="tile"><div class="t">Write your goals</div><p>Below. Be specific. Send them to me with your first check-in.</p><div class="write" style="margin-top:8px"></div><p style="font-size:8.5pt;color:var(--muted)">Sent to Will (date)</p></div>
+      </div>
+    </div>
+    <div class="section">
+      <h3><span class="n">2</span>Be specific with your goals</h3>
+      <p>Answer each one honestly. These are the reasons you'll come back to when motivation is low.</p>
+      <h4 style="margin-top:10px">What do you want to achieve?</h4>
+      <div class="write"></div><div class="write"></div>
+      <h4 style="margin-top:12px">Why do you want to achieve it?</h4>
+      <div class="write"></div><div class="write"></div>
+      <h4 style="margin-top:12px">What will it change in your life when you achieve it?</h4>
+      <div class="write"></div><div class="write"></div>
+      <h4 style="margin-top:12px">Who will be impacted when you achieve it?</h4>
+      <div class="write"></div><div class="write"></div>
+    </div>
+    <div class="box"><p><b>Remember the season you're in.</b> This isn't about perfection. Set goals you can work toward for weeks and months, not a goal you burn out on in two weeks.</p></div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>03</b></div>
+</section>
+
+<!-- 04 TRAINING EXPECTATIONS -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Training</div>
+    <h2>Training <span>Expectations</span></h2>
+    <p>3 full body workouts each week. Your sessions are delivered in TrainHeroic.</p>
+  </div>
+  <div class="body">
+    <div class="section">
+      <h3><span class="n">1</span>The expectation</h3>
+      <p class="lead">The expectation is that you're able to complete the 3 full body workouts each week.</p>
+      <p>If you can't get all 3 in, that's ok. Aim to go for a walk, do some push ups, sit ups, squats, anything you can do on the day you can't make it to the gym.</p>
+    </div>
+    <div class="grid2 section">
+      <div class="dark">
+        <h4>Time</h4>
+        <p>These workouts should hopefully only take <b>45 minutes</b>. If you have longer, take your time. If you need to speed it up, get what you can in <b>30 minutes</b>.</p>
+      </div>
+      <div class="dark">
+        <h4>Your schedule</h4>
+        <p>Feel free to move your training sessions to the days that work best for you. Work, kids and life come first. Fit the sessions around them.</p>
+      </div>
+    </div>
+    <div class="section">
+      <h3><span class="n">2</span>Allow rest</h3>
+      <p>Your motivation will be high starting this program. Don't overdo it. It's not about how hard you can go for a short period of time, it's about the consistency you can apply for weeks and months on end.</p>
+    </div>
+    <div class="section">
+      <h3><span class="n">3</span>Missed the gym? Do this instead</h3>
+      <div class="grid4">
+        <div class="tile"><div class="t">Walk</div><p>Get outside. Take the kids or the dog.</p></div>
+        <div class="tile"><div class="t">Push ups</div><p>Sets through the day. Every rep counts.</p></div>
+        <div class="tile"><div class="t">Sit ups</div><p>A few sets before bed or in the morning.</p></div>
+        <div class="tile"><div class="t">Squats</div><p>Bodyweight. In the living room is fine.</p></div>
+      </div>
+    </div>
+    <div class="section">
+      <h3><span class="n">4</span>Using TrainHeroic</h3>
+      <ul class="check">
+        <li>Your 3 full body sessions are in the app each week. Open the session for the day and work through it in order.</li>
+        <li>Log your weights and reps. That's how we see progression and know when to add weight.</li>
+        <li>Supersets show as 1A-1B, 2A-2B. Tempo and RIR are written on each exercise. Page 05 explains both.</li>
+        <li>If your gym doesn't have a machine, sub it out. More on that on page 05.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>04</b></div>
+</section>
+
+<!-- 05 TRAINING PRINCIPLES -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Training</div>
+    <h2>Understanding the <span>Training Principles</span></h2>
+    <p>What you'll see in your TrainHeroic sessions, and how to use it.</p>
+  </div>
+  <div class="body">
+    <div class="grid2 section">
+      <div>
+        <h3><span class="n">1</span>Reps in reserve (RIR)</h3>
+        <p>This is the number of reps before you reach muscular or technical failure. <b>3 RIR = 3 reps in the tank</b>, or 3 reps short of failure.</p>
+        <p>This takes time to learn and figure out, so don't stress this too much.</p>
+      </div>
+      <div class="dark">
+        <h4>RIR quick read</h4>
+        <table style="margin-top:2px">
+          <tr><td style="color:#fff;border-color:#2a2e36;background:transparent"><b style="color:var(--gold-b)">3 RIR</b></td><td style="color:var(--steel);border-color:#2a2e36;background:transparent">3 more good reps left</td></tr>
+          <tr><td style="color:#fff;border-color:#2a2e36;background:transparent"><b style="color:var(--gold-b)">2 RIR</b></td><td style="color:var(--steel);border-color:#2a2e36;background:transparent">Hard, but 2 left</td></tr>
+          <tr><td style="color:#fff;border-color:#2a2e36;background:transparent"><b style="color:var(--gold-b)">1 RIR</b></td><td style="color:var(--steel);border-color:#2a2e36;background:transparent">One rep left with good form</td></tr>
+          <tr><td style="color:#fff;border-color:transparent;background:transparent"><b style="color:var(--gold-b)">0 RIR</b></td><td style="color:var(--steel);border-color:transparent;background:transparent">Failure. Nothing left</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="section">
+      <h3><span class="n">2</span>Tempo</h3>
+      <p>In the program you'll see something like <b>1c, x, 3e, x</b> tempo.</p>
+      <div class="grid3">
+        <div class="tile"><div class="big">C</div><div class="t">Concentric</div><p>When you exert force. The push or the pull.</p></div>
+        <div class="tile"><div class="big">E</div><div class="t">Eccentric</div><p>The stretch. When the weight is returning to starting position.</p></div>
+        <div class="tile"><div class="big">X</div><div class="t">No pause</div><p>No pause between the concentric and the eccentric.</p></div>
+      </div>
+      <p style="margin-top:8px">Ideally just use a controlled tempo and don't feel you have to count every rep.</p>
+    </div>
+    <div class="grid2 section">
+      <div>
+        <h3><span class="n">3</span>Supersets</h3>
+        <p>These are labelled <b>1A-1B, 2A-2B</b> and so on. Do the exercises back to back and then take a rest.</p>
+        <p>The main purpose of a superset is to save time. If you want or have to split them up, you can.</p>
+        <h3 style="margin-top:12px"><span class="n">5</span>Substitutions</h3>
+        <p>Your gym won't necessarily have the same equipment my gym does, so sub machines out as you need to. A chest press is a chest press. If the machine is similar and you like it, use it. Doing movements in a different order is also fine, as you need to be efficient with your time.</p>
+      </div>
+      <div>
+        <h3><span class="n">4</span>Weight progression</h3>
+        <p>Only increase weight if you have hit the top end of the rep range. Example: 8-12 reps and you hit 12 by week 2 or 3.</p>
+        <p>Don't increase weight if you feel you can't maintain form or control of the exercise. Remember the season of life you're in, especially if you haven't worked out in a while. You don't want an injury because you went too hard too fast. Allow the body to adapt and build up steadily.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>05</b></div>
+</section>
+
+<!-- 06 RECOVERY -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Training</div>
+    <h2><span>Recovery</span></h2>
+    <p>Training is where you break down. Recovery is where you build back stronger.</p>
+  </div>
+  <div class="body">
+    <div class="grid3 section">
+      <div class="tile"><div class="big">7-8 hrs</div><div class="t">Sleep</div><p>There is no better recovery tool than sleep. Poor sleep will impact cognitive function, muscle recovery, your hormones and more. Ideally 7-8 hours per night, but in this season that can be difficult. Just do your best to get what you can.</p></div>
+      <div class="tile"><div class="big">1 gal</div><div class="t">Hydration</div><p>This is also key. Aim for a gallon of water per day. If you're hungry, sometimes you're just dehydrated. Proper hydration will also aid digestion and keep you regular.</p></div>
+      <div class="tile"><div class="big">Rest</div><div class="t">Fatigue management</div><p>There is a difference between being lazy and being run down or sick. If you feel sick or completely under recovered, take an extra rest day between training. Running yourself further into the ground will not help progression.</p></div>
+    </div>
+    <div class="section">
+      <h3><span class="n">1</span>Your weekly tracker</h3>
+      <p>Tick it off as you go. Bring it to your weekly check-in.</p>
+      <table class="week">
+        <tr><th>Week of: ________</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
+        <tr><td>Full body workout (3)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Walk / push ups / squats</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>8-12k steps</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Active time with kids</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>1 gallon of water</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Protein every meal</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Hours of sleep</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </table>
+    </div>
+    <div class="grid2">
+      <div class="dark"><h4>Lazy or run down?</h4><p>Just don't feel like it? Go, even if it's the 30 minute version. Sick, wrecked or barely slept for days? Take the extra rest day and tell the group. Nobody will judge you for that.</p></div>
+      <div class="dark"><h4>Consistency wins</h4><p>Weeks and months of steady work beat one big week. A missed day is not a failed week. Walk, push ups, back at it tomorrow.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>06</b></div>
+</section>
+
+<!-- 07 NUTRITION MISSION -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Nutrition</div>
+    <h2>Nutrition <span>Mission</span></h2>
+    <p>Nutrition is where the magic happens.</p>
+  </div>
+  <div class="body">
+    <div class="section">
+      <p class="lead">I want you to look at training as the avenue for building strength, getting fit, improving mobility and so on. But nutrition is where the magic happens when it comes to body composition goals.</p>
+      <p>If you don't commit to consistent application of the nutrition protocols, you won't improve to the level you're capable of.</p>
+    </div>
+    <div class="section">
+      <h3><span class="n">1</span>Consistency</h3>
+      <p>You don't have to be perfect with your nutrition. You're in a busy season of life and sometimes you have to do what you can. I will give you fast and easy on the go options you can use when needed (page 12).</p>
+      <div class="quote"><p>Don't guilt yourself if you have a slip. Get right back on track as if nothing happened.</p><div class="who">Will Carter</div></div>
+    </div>
+    <div class="section">
+      <h3><span class="n">2</span>Fueling performance</h3>
+      <p>Even if your goal is fat loss, the goal is not to create the largest deficit possible and be excessively restrictive. The goal is to eat high volume foods that allow you to feel satiated and fuel performance. Once you do this, you'll notice such a huge difference in how you feel.</p>
+      <div class="grid4" style="margin-top:8px">
+        <div class="tile"><div class="t">Oats</div><p>Quick oats in the morning.</p></div>
+        <div class="tile"><div class="t">Rice</div><p>Jasmine or basmati.</p></div>
+        <div class="tile"><div class="t">Potatoes</div><p>Sweet or white.</p></div>
+        <div class="tile"><div class="t">Fruit + sourdough</div><p>Great carbs to build in.</p></div>
+      </div>
+    </div>
+    <div class="section">
+      <h3><span class="n">3</span>Meal examples, not a meal template</h3>
+      <p>I will give meal examples but not a meal template, as I want you to eat according to your lifestyle and circumstances. A meal template is strict and will not allow you to make your own decisions as you go.</p>
+      <div class="box"><p><b>Eating for health is a lifestyle, not a short term fix.</b></p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>07</b></div>
+</section>
+
+<!-- 08 PROTOCOL + EXAMPLES -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Nutrition</div>
+    <h2>Nutrition <span>Protocol</span></h2>
+    <p>Simple targets to start. No calorie counting unless you feel confident doing it.</p>
+  </div>
+  <div class="body">
+    <div class="section">
+      <p>I don't want you to track calories unless you feel confident doing that through a tracking app. We will learn to do this accurately over time. I want you to focus on simple targets to start.</p>
+      <div class="grid4" style="grid-template-columns:repeat(5,1fr);margin-top:8px">
+        <div class="tile hand"><div class="big">1 gal</div><div class="t">Water</div><p>per day</p></div>
+        <div class="tile hand"><div class="big">1-2</div><div class="t">Palms of protein</div><p>per meal</p></div>
+        <div class="tile hand"><div class="big">1-2</div><div class="t">Fists of veggies</div><p>and/or fruit</p></div>
+        <div class="tile hand"><div class="big">1 cup</div><div class="t">Of carbs</div><p>potatoes, rice, oats</p></div>
+        <div class="tile hand"><div class="big">1</div><div class="t">Thumb of fat</div><p>olive oil, nuts, avocado</p></div>
+      </div>
+    </div>
+    <div class="section">
+      <h3><span class="n">1</span>Nutrition examples</h3>
+      <div class="meal"><div class="k">Breakfast</div><p>2 eggs (scrambled), 1 slice of sourdough bread, ½ an avocado, handful of blueberries.</p></div>
+      <div class="meal"><div class="k">Lunch</div><p>2 palms of chicken breast, 1 cup of sweet or white potato, 2 fists of veggies of choice.</p></div>
+      <div class="meal"><div class="k">Dinner</div><p>2 palms of 93% ground beef, 2 taco shells, palm of pinto or black beans, lettuce, tomato, ½ an avocado.</p></div>
+      <div class="meal" style="border-bottom:none"><div class="k">Snack</div><p>2 Oikos protein yogurts, handful of blueberries and strawberries, palm of nuts (almonds, cashews, pistachios).</p></div>
+    </div>
+    <div class="grid2">
+      <div class="dark"><h4>Build your own plate</h4><p>Start with your palm of protein. Add your fist of veggies or fruit, your cup of carbs, and your thumb of fat. Use the grocery list on page 11 to swap in foods you like.</p></div>
+      <div class="dark"><h4>Family dinner</h4><p>Taco night works. So does most of what your family already eats. Keep your protein portion, load up the veggies, and enjoy the table.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>08</b></div>
+</section>
+
+<!-- 09 TRACKING / IF / 90-10 -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Nutrition</div>
+    <h2>Tracking, Fasting and <span>90/10</span></h2>
+    <p>Tools you can use when you're ready. None of them have to be perfect to work.</p>
+  </div>
+  <div class="body">
+    <div class="section">
+      <h3><span class="n">1</span>Tracking macros</h3>
+      <p>If you feel comfortable tracking macros, reach out to me and I will give you macro numbers to follow. I do advocate for learning to do this and doing it for a period of time, so you gain better awareness of what you're putting into your body and the serving sizes you need.</p>
+      <p>Once you have done it for a while, you gain good awareness to then eyeball your serving sizes and know that you're close enough. If you want to track macros for a much longer period of time, you absolutely can. Just know you don't have to be absolutely perfect for it to work.</p>
+      <div class="box"><p><b>The app I recommend: MyFitnessPal.</b> Huge food database, barcode scanner, and most restaurant chains are already in it. Download it here: <span class="ph">[WILL'S MYFITNESSPAL REFERRAL LINK]</span></p></div>
+    </div>
+    <div class="section">
+      <h3><span class="n">2</span>Intermittent fasting</h3>
+      <p>Some of you might like to use this as a way to limit how much food you can consume. I know some of you like to eat big meals, so intermittent fasting lets you eat larger meals because your eating window is smaller.</p>
+      <p>You can have an <b>8 hour window</b> to eat that suits you, whether that's getting food in earlier in the day or later in the afternoon and evening. This doesn't allow you to eat whatever you want. The goal to eat quality nutrition is still there, but it might help you have better compliance to the plan.</p>
+    </div>
+    <div class="section">
+      <h3><span class="n">3</span>Getting started in MyFitnessPal</h3>
+      <div class="grid3">
+        <div class="tile"><div class="t">1. Download</div><p>Use the link above and set up your profile.</p></div>
+        <div class="tile"><div class="t">2. Get your numbers</div><p>Message me and I'll give you macro numbers to enter in the app.</p></div>
+        <div class="tile"><div class="t">3. Log honestly</div><p>Scan barcodes, weigh what you can, eyeball the rest. Close enough works.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>09</b></div>
+</section>
+
+<!-- 10 CHEAT MEALS -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Nutrition</div>
+    <h2>No Cheat Meals. <span>90/10.</span></h2>
+    <p>Enjoy date night and ice cream with your kids, without letting it derail you.</p>
+  </div>
+  <div class="body">
+    <div class="section">
+      <h3><span class="n">1</span>Why I don't use the term</h3>
+      <p>I personally dislike this term, because you don't cheat on your diet. You aren't in a relationship with food. Eating is something we have to do to fuel our bodies, recover and perform better.</p>
+      <p>I'm a huge advocate for enjoying date nights with your significant other and ice cream with your kids, and I don't want you to have to sacrifice all of that. What I want for you is that you're able to do those things without letting it derail you completely.</p>
+      <div class="grid2" style="margin-top:6px">
+        <div class="dark"><h4>90/10</h4><p>If you want faster, better progression. 90% of your diet is healthy, nutritious foods that support your goals. 10% is for the foods you love, with a level of control.</p></div>
+        <div class="dark"><h4>80/20</h4><p>If you feel you have more freedom and enjoyment for life this way, that works. 80% nutritious foods, 20% for enjoying the foods you love.</p></div>
+      </div>
+      <p style="margin-top:10px">The goal is not for a pizza night to turn into a pizza, ice cream and candy night, but to make the decision on what you really want. Perhaps you don't need the entire pizza. Have 2 slices, then eat protein and vegetables on the side to fill you up and help you stay on track.</p>
+    </div>
+    <div class="section">
+      <h3><span class="n">2</span>Make the decision</h3>
+      <div class="grid4">
+        <div class="tile"><div class="t">Pizza night</div><p>2 slices, then protein and vegetables on the side to fill you up.</p></div>
+        <div class="tile"><div class="t">Date night</div><p>Pick the one thing you really want, the dessert or the drink. Protein and veggies with the meal.</p></div>
+        <div class="tile"><div class="t">Ice cream with the kids</div><p>Have it. Be there. Next meal, back on track as if nothing happened.</p></div>
+        <div class="tile"><div class="t">Birthday parties</div><p>Eat protein before you go so you aren't starving. Enjoy a slice of cake.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>10</b></div>
+</section>
+
+<!-- 10 GROCERY -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Nutrition</div>
+    <h2>Forged Fathers <span>Grocery List</span></h2>
+    <p>Screenshot it, print it, take it to the store.</p>
+  </div>
+  <div class="body groc">
+    <p>Here is a list of the foods I recommend. It doesn't mean you have to stick to this, but typically these are the foods that will help you stay satiated, help you perform and recover, help digestion and ultimately make you feel as good as you can feel.</p>
+    <div class="grid2" style="margin-top:10px">
+      <div>
+        <h4>Carbohydrates</h4>
+        <ul>
+          <li>Quick oats</li><li>Jasmine or basmati rice</li><li>Sweet or white potatoes</li><li>Sourdough bread</li><li>Blueberries or raspberries</li><li>Strawberries</li><li>Banana <i>(pre workout is ideal if you have them)</i></li><li>Apples</li><li>Grapes</li><li>Beans</li>
+        </ul>
+        <h4 style="margin-top:14px">Fats</h4>
+        <ul>
+          <li>Avocado</li><li>Cashews</li><li>Almonds</li><li>Olive oil</li><li>Feta cheese</li><li>Cashew, almond or peanut butter</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Proteins <small>Pick 1-3 favorites</small></h4>
+        <ul>
+          <li>Chicken breast</li><li>Chicken thighs <i>(slightly higher in fat)</i></li><li>Tuna steak</li><li>Salmon <i>(higher in fat)</i></li><li>Shrimp</li><li>Cod</li><li>Filet</li><li>Sirloin steak</li><li>Whey protein isolate</li><li>Egg whites</li><li>Eggs <i>(higher in fat)</i></li><li>Turkey tenderloin</li>
+        </ul>
+        <p style="font-size:9.4pt;margin-top:6px">Make sure your picks aren't all higher fat options.</p>
+        <h4 style="margin-top:10px">Vegetables <small>Pick the ones you like</small></h4>
+        <ul style="columns:2;column-gap:14px">
+          <li>Asparagus</li><li>Zucchini</li><li>Broccoli</li><li>Peppers</li><li>Onions</li><li>Cabbage</li><li>Spinach</li><li>Mushrooms</li><li>Tomatoes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>11</b></div>
+</section>
+
+<!-- 11 FAST PROTEIN -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">On the go</div>
+    <h2>Fast and Easy <span>Protein</span></h2>
+    <p>For the busy days. Quick options so a crazy schedule doesn't knock you off track.</p>
+  </div>
+  <div class="body">
+    <div class="grid3 section">
+      <div class="dark"><h4>The smoothie</h4><p>2 scoops whey protein isolate, 1 cup chocolate Fairlife or a similar high-protein milk, a banana or berries. Breakfast in two minutes.</p><p style="margin:6px 0 0"><b>About 60g protein</b></p></div>
+      <div class="dark"><h4>Night dessert</h4><p>Greek yogurt or an Oikos protein yogurt, berries, a few dark chocolate chips, a crumbled rice cake for crunch. Kids are down and you want something sweet.</p><p style="margin:6px 0 0"><b>About 20-25g protein</b></p></div>
+      <div class="dark"><h4>Ready to drink shakes</h4><p>For a crazy day, a road trip or the car line. Keep a couple in the fridge or truck for emergencies. Real food carries the rest.</p><p style="margin:6px 0 0"><b>About 30g protein</b></p></div>
+    </div>
+    <div class="section">
+      <h3><span class="n">1</span>Protein cheat sheet</h3>
+      <p>Approximate protein per serving. Meat and fish are cooked weight. A palm is roughly 4 oz. Check your labels, brands vary.</p>
+      <div class="grid2">
+        <table>
+          <tr><th>Food</th><th>Serving</th><th>Protein</th></tr>
+          <tr><td>Chicken breast</td><td>1 palm (4 oz)</td><td><b>35g</b></td></tr>
+          <tr><td>Chicken thighs</td><td>1 palm (4 oz)</td><td><b>28g</b></td></tr>
+          <tr><td>Turkey tenderloin</td><td>1 palm (4 oz)</td><td><b>32g</b></td></tr>
+          <tr><td>93% ground beef</td><td>1 palm (4 oz)</td><td><b>28g</b></td></tr>
+          <tr><td>Sirloin or filet</td><td>1 palm (4 oz)</td><td><b>32g</b></td></tr>
+          <tr><td>Shrimp</td><td>1 palm (4 oz)</td><td><b>27g</b></td></tr>
+          <tr><td>Cod</td><td>1 palm (4 oz)</td><td><b>26g</b></td></tr>
+          <tr><td>Salmon</td><td>1 palm (4 oz)</td><td><b>28g</b></td></tr>
+          <tr><td>Tuna steak</td><td>1 palm (4 oz)</td><td><b>34g</b></td></tr>
+        </table>
+        <table>
+          <tr><th>Food</th><th>Serving</th><th>Protein</th></tr>
+          <tr><td>Whey protein isolate</td><td>1 scoop</td><td><b>25g</b></td></tr>
+          <tr><td>Egg whites</td><td>½ cup</td><td><b>13g</b></td></tr>
+          <tr><td>Eggs</td><td>2 large</td><td><b>12g</b></td></tr>
+          <tr><td>Oikos protein yogurt</td><td>1 cup</td><td><b>15-20g</b></td></tr>
+          <tr><td>Greek yogurt, plain</td><td>1 cup</td><td><b>23g</b></td></tr>
+          <tr><td>Fairlife milk</td><td>1 cup</td><td><b>13g</b></td></tr>
+          <tr><td>Beans, pinto or black</td><td>½ cup</td><td><b>7g</b></td></tr>
+          <tr><td>Beef jerky</td><td>1 oz</td><td><b>10g</b></td></tr>
+          <tr><td>Feta cheese</td><td>1 oz</td><td><b>4g</b></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="box"><p><b>Found a quick option that works for you?</b> Share it in the WhatsApp group. Somebody else needs it this week.</p></div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>12</b></div>
+</section>
+
+<!-- 12 EATING OUT -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Real life</div>
+    <h2>Eating Out and <span>Travel</span></h2>
+    <p>Date nights, tournaments, work trips. Make the decision on what you really want.</p>
+  </div>
+  <div class="body">
+    <div class="section">
+      <p>Same approach wherever you are: a palm or two of protein, some veggies or fruit, a sensible portion of carbs. Enjoy the meal, then get right back on track as if nothing happened.</p>
+      <table>
+        <tr><th style="width:1.35in">Where</th><th>Go for</th><th style="width:1.9in">Watch out for</th></tr>
+                <tr><td><b>Date night</b></td><td>Steak, chicken or fish with a veggie and a potato or rice. Decide on the one treat you really want</td><td>Bread basket, appetizer, dessert and drinks all at once</td></tr>
+        <tr><td><b>Mexican</b></td><td>Chicken or steak fajitas or a bowl, beans, salsa, lettuce</td><td>Cheese-heavy combo plates, the second basket of chips</td></tr>
+        <tr><td><b>Burger spots</b></td><td>Single or double patty, lettuce, tomato. Small fry if you really want it</td><td>Large fries and a shake on top</td></tr>
+        <tr><td><b>Sub shops</b></td><td>Double chicken or turkey, all the veggies</td><td>Footlong, creamy sauce, chips and cookie</td></tr>
+        <tr><td><b>Hotel breakfast</b></td><td>Eggs, oatmeal, fruit, Greek yogurt. Add a shake from your bag</td><td>Waffles, pastries, juice</td></tr>
+        <tr><td><b>Gas station</b></td><td>Jerky, Fairlife or a ready to drink shake, string cheese, banana or apple</td><td>Energy drinks, roller grill, candy</td></tr>
+        <tr><td><b>Airport</b></td><td>Protein box, grilled chicken wrap or salad, jerky</td><td>Pretzels, cinnamon rolls, sugary coffee</td></tr>
+      </table>
+    </div>
+    <div class="grid2">
+      <div class="dark"><h4>Pack a travel kit</h4><ul class="check"><li>Shaker bottle and whey, pre-portioned</li><li>Jerky or meat sticks</li><li>Nuts, a palm per bag</li><li>One or two ready to drink shakes</li><li>A gallon jug or big water bottle</li></ul></div>
+      <div class="dark"><h4>Stuck on a menu?</h4><p>Snap a photo and post it in the WhatsApp group with what you've eaten so far today. If you're tracking, most chains are already in MyFitnessPal. Search the restaurant name.</p><p style="margin-top:8px">And remember: you don't cheat on your diet. Enjoy the ice cream with your kids. Just don't let it derail you.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Forged Fathers · Member Starter Pack</span><b>13</b></div>
+</section>
+
+<!-- 13 CHECK-IN + GROUP -->
+<section class="page">
+  <div class="band">
+    <img class="mark" src="logo-web.jpg" alt="" />
+    <div class="kicker">Every week</div>
+    <h2>Check-ins and Group <span>Accountability</span></h2>
+    <p>Weigh-in, pictures, compliance to the plan. Sent to me every week.</p>
+  </div>
+  <div class="body">
+    <div class="grid2 section">
+      <div>
+        <h3><span class="n">1</span>Weekly check-in</h3>
+        <p>Copy this into a message, fill it in and send it to me with your pictures. Same day every week.</p>
+<div class="code"><b>FF CHECK-IN</b> · Week of: ____
+Weight: ____   Last week: ____
+Pictures: front / side / back sent
+Workouts done: __ of 3
+Missed days covered (walk, push ups): __
+Avg steps: ____
+Water (gallon days): __ of 7
+Nutrition compliance: __ of 7 days
+Tracking? Y / N   (MyFitnessPal)
+<b>WINS</b>
+1. __________________
+<b>STRUGGLES</b>
+1. __________________
+<b>PROUD DAD MOMENT</b>
+__________________
+<b>ONE QUESTION FOR WILL</b>
+__________________</div>
+      </div>
+      <div>
+        <h3><span class="n">2</span>Group accountability</h3>
+        <p>We have a WhatsApp group where the expectation is to share wins, struggles, proud moments and to lean on one another.</p>
+        <div class="quote" style="margin-top:6px"><p>Iron Sharpens Iron.</p><div class="who">Will Carter</div></div>
+        <ul class="check">
+          <li><b>Share meals.</b> If you have found some delicious healthy meals, share them with the group.</li>
+          <li><b>Ask.</b> If you're struggling on what to eat and when, ask the group.</li>
+          <li><b>Lean on each other.</b> When motivation is lacking, say so. That's what the group is for.</li>
+          <li><b>Not a competition.</b> This isn't about who can make the most progress. It's about working together so that everyone achieves great progress.</li>
+        </ul>
+        <div class="dark" style="margin-top:10px"><h4>End of week 4</h4><p>Group session together, and you can bring your kids, as long as they're old enough to work out safely.</p></div>
+      </div>
+    </div>
+    <div class="box"><p><b>We're here to help one another succeed.</b> Questions about this pack, your training in TrainHeroic, or your nutrition? Post in the group or message me directly.</p></div>
+  </div>
+  <div class="foot"><span>Not medical advice. Check with your doctor before big changes.</span><b>14</b></div>
+</section>
+
+</body>
+</html>

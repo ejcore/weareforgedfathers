@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="ff-build" content="2026-10-26-b5" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Forged Fathers | Strength, Nutrition and Brotherhood for Dads</title>
+<meta name="description" content="Forged Fathers: online coaching for dads with Will Carter. 3 full body workouts a week in TrainHeroic, simple nutrition, weekly check-ins and a WhatsApp group. Iron sharpens Iron. $39/month or $349/year." />
+<link rel="icon" href="logo-web.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#070707; --bg2:#0e0f10; --panel:#141516; --panel2:#1a1c1e;
+    --line:#26282b; --line2:#33363a;
+    --steel:#c9ccd0; --steel2:#9aa0a6; --text:#e9eaec; --muted:#9a9fa5;
+    --bronze:#b9814f; --bronze2:#d39a66; --bronze-dk:#8a5d36;
+    --radius:14px; --max:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3,.display{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.95;color:#f3f4f5}
+  h2{font-size:clamp(40px,5.4vw,64px)}
+  h3{font-size:28px;letter-spacing:.03em}
+  p{color:var(--muted)}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze2);margin-bottom:16px}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--bronze)}
+  .lead{font-size:18px;color:#b9bdc2;max-width:640px}
+  section{padding:104px 0;border-top:1px solid var(--line)}
+  .sec-head{max-width:720px;margin-bottom:52px}
+  .sec-head p{margin-top:18px}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:10px;font-weight:700;font-size:15px;letter-spacing:.02em;transition:transform .15s,background .15s,border-color .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:linear-gradient(180deg,var(--bronze2),var(--bronze));color:#140c05;box-shadow:0 8px 24px rgba(185,129,79,.22)}
+  .btn-primary:hover{background:linear-gradient(180deg,#e0a874,var(--bronze2))}
+  .btn-ghost{border:1px solid var(--line2);color:var(--text);background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{border-color:var(--steel2)}
+  .btn-sm{padding:10px 18px;font-size:14px}
+
+  /* Banners */
+  .refer{background:linear-gradient(90deg,#2a1b0f,#3a2614 50%,#2a1b0f);border-bottom:1px solid var(--bronze-dk)}
+  .refer .wrap{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;text-align:center}
+  .refer p{color:#f1dcc6;font-size:15px}
+  .refer strong{color:#fff;font-weight:800}
+  .refer a{background:#f1dcc6;color:#2a1b0f;font-weight:800;font-size:13px;padding:8px 14px;border-radius:8px;letter-spacing:.03em}
+  .refer a:hover{background:#fff}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand img{width:64px;height:64px;object-fit:contain;background:#050505;border:1px solid var(--line2);border-radius:10px}
+  .brand .nm{font-family:"Bebas Neue",sans-serif;font-size:26px;letter-spacing:.06em;line-height:1;color:#eef0f2}
+  .brand .nm small{display:block;font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.2em;color:var(--bronze2);font-weight:600;margin-top:4px;text-transform:uppercase}
+  .links{display:flex;align-items:center;gap:30px}
+  .links a{font-size:14px;color:#b4b8bd;font-weight:500}
+  .links a:hover{color:#fff}
+  .links a.btn-primary,.links a.btn-primary:hover{color:#140c05}
+
+  /* Hero */
+  .hero{position:relative;padding:88px 0 96px;border-top:none;overflow:hidden;background:
+    linear-gradient(90deg,rgba(7,7,7,.94) 0%,rgba(7,7,7,.80) 45%,rgba(7,7,7,.55) 100%),
+    linear-gradient(180deg,rgba(7,7,7,.2) 60%,var(--bg) 100%),
+    url(mountain-bg.jpg) center 40%/cover no-repeat,var(--bg)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(56px,8vw,104px);margin-bottom:24px}
+  .hero h1 em{font-style:normal;color:var(--bronze2)}
+  .hero .lead{margin-bottom:30px}
+  .price-pill{display:inline-flex;align-items:center;gap:14px;border:1px solid var(--line2);background:var(--panel);border-radius:999px;padding:8px 8px 8px 18px;margin-bottom:30px;font-size:14px;color:#c9ccd0}
+  .price-pill b{color:#fff;font-size:16px}
+  .price-pill span.tag{background:rgba(185,129,79,.15);border:1px solid var(--bronze-dk);color:var(--bronze2);font-weight:700;font-size:12px;padding:6px 12px;border-radius:999px;letter-spacing:.04em}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap}
+  .hero-meta div{font-size:13px;color:var(--muted)}
+  .hero-meta b{display:block;font-family:"Bebas Neue",sans-serif;font-size:30px;color:#eceef0;font-weight:400;letter-spacing:.03em;line-height:1}
+  .lockup{justify-self:center;position:relative;width:min(360px,100%)}
+  .lockup::before{content:"";position:absolute;inset:-28px;border-radius:28px;background:radial-gradient(closest-side,rgba(185,129,79,.18),transparent 75%);z-index:0}
+  .lockup .frame{position:relative;z-index:1;background:#12141a;border:1px solid var(--line2);border-radius:22px;padding:14px;box-shadow:0 30px 80px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04)}
+  .lockup img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;border-radius:12px}
+  .lockup .cap{position:relative;z-index:1;text-align:center;margin-top:16px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel2)}
+
+  /* Program first */
+  #program{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+
+  /* Nutrition */
+  .nutrition{background:var(--bg)}
+  .badge-incl{display:inline-block;background:var(--bronze);color:#140c05;font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:7px 12px;border-radius:6px;margin-bottom:18px}
+  .nut-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .card p{font-size:15px}
+  .track{position:relative;overflow:hidden}
+  .track .lvl{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze2);margin-bottom:10px}
+  .track h3{margin-bottom:12px}
+  .track ul{list-style:none;margin-top:18px;display:grid;gap:10px}
+  .track li{font-size:14.5px;color:#c4c8cc;padding-left:22px;position:relative}
+  .track li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:2px;background:var(--bronze)}
+  .rule{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;background:linear-gradient(90deg,#1b140e,var(--panel) 60%);border:1px solid #3a2a1c}
+  .rule .big{font-family:"Bebas Neue",sans-serif;font-size:clamp(64px,9vw,112px);line-height:.85;color:var(--bronze2)}
+  .rule .big small{display:block;font-size:22px;letter-spacing:.12em;color:#d9c3ad;margin-top:6px}
+  .rule h3{margin-bottom:8px}
+  .hacks{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:4px}
+  .hack{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .hack .n{font-family:"Bebas Neue",sans-serif;color:var(--bronze);font-size:22px;letter-spacing:.06em}
+  .hack h4{font-size:15.5px;color:#eceef0;margin:6px 0 6px;font-weight:700}
+  .hack p{font-size:14px}
+  .nut-note{margin-top:26px;font-size:13px;color:#7d8288}
+
+  /* Program */
+  .prog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .feat .ico{width:46px;height:46px;border-radius:10px;border:1px solid var(--line2);background:var(--panel2);display:grid;place-items:center;margin-bottom:20px}
+  .feat .ico svg{width:22px;height:22px;stroke:var(--bronze2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .feat h3{font-size:25px;margin-bottom:10px}
+  .steps{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .step{padding:30px;background:var(--panel)}
+  .step+.step{border-left:1px solid var(--line)}
+  .step .k{font-family:"Bebas Neue",sans-serif;font-size:46px;color:#3b3e42;line-height:1}
+  .step h4{color:#eceef0;font-size:17px;margin:8px 0 6px}
+  .step p{font-size:14.5px}
+  .step a{color:var(--bronze2);font-weight:600}
+
+  /* Will */
+  .will-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .will-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:0;position:relative;overflow:hidden}
+  .will-card .photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-bottom:1px solid var(--line)}
+  .will-card .will-meta{padding:28px 32px 32px}
+  .will-card h3{font-size:36px}
+  .will-card .handle{color:var(--bronze2);font-weight:600;font-size:14px;margin:4px 0 22px;display:inline-block}
+  .creds{list-style:none;display:grid;gap:12px}
+  .creds li{display:flex;gap:12px;font-size:14.5px;color:#c4c8cc;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .creds li:last-child{border-bottom:none;padding-bottom:0}
+  .creds li span{color:var(--bronze);font-weight:800}
+  .will-copy p+p{margin-top:16px}
+  .quote{margin-top:28px;border-left:2px solid var(--bronze);padding:4px 0 4px 20px;font-size:19px;color:#dfe1e3;font-weight:500}
+
+  /* Proof */
+  .proof{background:var(--bg2)}
+  .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pillar h3{font-size:30px;margin-bottom:10px}
+  .pillar .line{width:36px;height:2px;background:var(--bronze);margin-bottom:22px}
+  .quotes{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .qcard{border:1px dashed var(--line2);border-radius:var(--radius);padding:26px;background:rgba(255,255,255,.01)}
+  .qcard .ph{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6f747a;margin-bottom:12px}
+  .qcard p{color:#cfd2d5;font-size:15.5px}
+  .qcard .who{margin-top:14px;font-size:13px;color:#7d8288}
+  .kids{margin-top:22px;text-align:center;padding:56px 24px;border:1px solid var(--line);border-radius:18px;background:radial-gradient(600px 220px at 50% 0%,rgba(185,129,79,.10),transparent 70%),var(--panel)}
+  .kids h3{font-size:clamp(34px,4.6vw,54px);max-width:840px;margin:0 auto}
+  .kids p{margin-top:14px}
+
+  /* Straight talk */
+  .talk-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .talk h3{font-size:26px;margin-bottom:16px}
+  .talk ul{list-style:none;display:grid;gap:12px}
+  .talk li{display:flex;gap:12px;font-size:15px;color:#c4c8cc}
+  .talk li i{font-style:normal;font-weight:800;flex:0 0 18px}
+  .yes i{color:var(--bronze2)}
+  .no i{color:#6c7177}
+  .no{background:#101112}
+
+  /* Resources */
+  .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .res{display:flex;flex-direction:column;gap:8px}
+  .res .tag{align-self:flex-start;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#7d8288;border:1px solid var(--line2);padding:4px 10px;border-radius:999px}
+  .res h4{color:#eceef0;font-size:17px;margin-top:10px}
+  .res p{font-size:14.5px}
+
+  /* Pricing / CTA */
+  .cta{background:radial-gradient(900px 400px at 50% 0%,rgba(185,129,79,.12),transparent 65%),var(--bg)}
+  .cta .sec-head{margin:0 auto 48px;text-align:center}
+  .cta .sec-head .eyebrow{justify-content:center}
+  .cta .sec-head .lead{margin:18px auto 0}
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin:0 auto}
+  .plan{background:var(--panel);border:1px solid var(--line2);border-radius:18px;padding:36px;position:relative}
+  .plan.best{border-color:var(--bronze-dk);background:linear-gradient(180deg,#1c1510,var(--panel))}
+  .plan .ribbon{position:absolute;top:-12px;right:24px;background:var(--bronze);color:#140c05;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:6px}
+  .plan .pname{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--steel2)}
+  .plan .amt{font-family:"Bebas Neue",sans-serif;font-size:76px;color:#fff;line-height:1;margin:12px 0 4px}
+  .plan .amt small{font-family:Inter,sans-serif;font-size:16px;color:var(--muted);font-weight:500}
+  .plan .sub{font-size:14px;color:var(--muted);margin-bottom:24px}
+  .plan ul{list-style:none;display:grid;gap:10px;margin-bottom:28px}
+  .plan li{font-size:14.5px;color:#c9ccd0;padding-left:24px;position:relative}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--bronze2);font-weight:800}
+  .plan .btn{width:100%}
+  .fine{text-align:center;margin-top:28px;font-size:13.5px;color:#80858b}
+  .fine a{color:var(--bronze2);font-weight:600}
+
+  a.ig{display:inline-flex;align-items:center;gap:8px;color:var(--steel)!important}
+  a.ig svg{flex:0 0 auto;opacity:.9}
+  a.ig:hover{color:var(--bronze2)!important}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:56px 0 36px;background:#050505}
+  .foot{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center}
+  .foot img{width:120px;height:120px;object-fit:contain;background:#050505;border:1px solid var(--line);border-radius:14px}
+  .foot .t{font-family:"Bebas Neue",sans-serif;font-size:30px;letter-spacing:.06em;color:#eceef0}
+  .foot p{font-size:14px}
+  .foot nav{position:static;background:none;border:none;backdrop-filter:none}
+  .foot .fl{display:grid;gap:8px;text-align:right}
+  .foot .fl a{font-size:14px;color:#a8adb2}
+  .foot .fl a:hover{color:#fff}
+  .legal{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:#6c7177;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  /* Responsive */
+  @media (max-width:1000px){
+    .prog-grid{grid-template-columns:1fr 1fr}
+    .hacks{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:860px){
+    section{padding:76px 0}
+    .links a:not(.btn){display:none}
+    .hero{padding:56px 0 72px}
+    .hero-grid,.will-grid,.nut-grid,.talk-grid,.plans{grid-template-columns:1fr}
+    .lockup{order:-1;width:min(300px,82%)}
+    .rule{grid-template-columns:1fr;gap:12px}
+    .proof-grid,.quotes,.res-grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .step+.step{border-left:none;border-top:1px solid var(--line)}
+    .foot{grid-template-columns:1fr;text-align:center;justify-items:center}
+    .foot .fl{text-align:center}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 18px}
+    .prog-grid,.hacks{grid-template-columns:1fr}
+    .brand img{width:56px;height:56px}
+    .brand .nm small{display:none}
+    .ctas .btn{width:100%}
+    .card{padding:24px}
+    .plan{padding:28px}
+  }
+</style>
+</head>
+<body>
+
+
+<div class="refer">
+  <div class="wrap">
+    <p><strong>Bring a brother.</strong> Refer a dad. When he joins, <strong>you get a free month.</strong></p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_nV7lbEJ4fhs09ZAhyD1bc0Js6bmoJ1rfu8Fh5YhcCjiDRQ/viewform" target="_blank" rel="noopener">Refer a dad</a>
+  </div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Forged Fathers home">
+      <img src="logo-web.jpg" alt="Forged Fathers logo" width="64" height="64" />
+      <span class="nm">Forged Fathers<small>Led by Will Carter</small></span>
+    </a>
+    <div class="links">
+      <a href="#program">Program</a>
+      <a href="#nutrition">Nutrition</a>
+      <a href="#will">Will</a>
+      <a href="#join">Pricing</a>
+      <a class="btn btn-primary btn-sm" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">Join</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Online coaching for dads</div>
+      <h1>Get strong. Stay present. <em>Keep your word.</em></h1>
+      <p class="lead">Forged Fathers helps dads be the best version of themselves for their family. We build strength, fitness, discipline and consistency, and we hold each other accountable. Not perfection. Doing what you can, where you are, with what you have.</p>
+      <div class="price-pill"><span><b>$39</b>/month or <b>$349</b>/year</span><span class="tag">Nutrition included</span></div>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">DM @weareforgedfathers</a>
+        <a class="btn btn-ghost" href="#program">See what's included</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>3x</b>Full body / week</div>
+        <div><b>45 min</b>Per session</div>
+        <div><b>Weekly</b>Check-ins with Will</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <div class="frame"><img src="logo-web.jpg" alt="Forged Fathers forge mark" width="332" height="332" /></div>
+      <div class="cap">weareforgedfathers</div>
+    </div>
+  </div>
+</header>
+
+<section id="program">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What's included</div>
+      <h2>Everything in the membership.</h2>
+      <p class="lead">Train, eat, and check in with the same group of dads. Iron sharpens Iron. When motivation is lacking, you lean on the brothers next to you.</p>
+    </div>
+
+    <div class="prog-grid">
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M6 7v10M18 7v10M3 9v6M21 9v6M6 12h12"/></svg></div>
+        <h3>3 full body workouts</h3>
+        <p>Delivered in TrainHeroic. About 45 minutes. Short on time? Get what you can in 30. Move the days to fit your week.</p>
+      </div>
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div>
+        <h3>Daily movement</h3>
+        <p>8 to 12k steps a day and 15 to 30 minutes of activity with your kids, 3 to 5 times a week. Missed the gym? Walk, push ups, squats.</p>
+      </div>
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8h14M5 16h14"/><circle cx="12" cy="8" r="2"/><circle cx="12" cy="16" r="2"/></svg></div>
+        <h3>Member starter pack</h3>
+        <p>Training principles, nutrition protocol, meal examples and Will's grocery list. Included. No upsell.</p>
+      </div>
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1-5A8 8 0 1 1 21 12z"/></svg></div>
+        <h3>WhatsApp + check-ins</h3>
+        <p>Share wins, struggles and proud moments in the group. Weekly weigh-in, pictures and compliance sent to Will. Monthly Zoom Q&amp;A.</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="k">01</div><h4>DM on Instagram</h4><p>Message <a href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">@weareforgedfathers</a> to join.</p></div>
+      <div class="step"><div class="k">02</div><h4>Pay monthly or yearly</h4><p>$39/month or $349/year. Same program either way.</p></div>
+      <div class="step"><div class="k">03</div><h4>Start this week</h4><p>Do your starting assessment, get your TrainHeroic program, the member starter pack and the WhatsApp invite.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="nutrition" id="nutrition">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="badge-incl">Included</span>
+      <h2>Nutrition is where the magic happens.</h2>
+      <p class="lead">Training builds strength, fitness and mobility. Nutrition is what changes your body composition. You don't have to be perfect. You have to be consistent.</p>
+    </div>
+
+    <div class="nut-grid">
+      <div class="card track">
+        <div class="lvl">Start here</div>
+        <h3>Simple targets</h3>
+        <p>No calorie counting on day one. Hit these and build from there.</p>
+        <ul>
+          <li>1 gallon of water per day</li>
+          <li>1 to 2 palms of protein per meal</li>
+          <li>1 to 2 fists of veggies and/or fruit</li>
+          <li>1 cup of carbs (potatoes, rice, oats)</li>
+          <li>1 thumb of healthy fats (olive oil, nuts, avocado)</li>
+        </ul>
+      </div>
+      <div class="card track">
+        <div class="lvl">When you're ready</div>
+        <h3>Macros from Will</h3>
+        <p>Feel comfortable tracking? Reach out and Will gives you macro numbers to follow. Track for a while, learn your serving sizes, then eyeball it and know you're close enough.</p>
+        <ul>
+          <li>Meal examples, not a strict meal template</li>
+          <li>Will recommends <a href="https://www.myfitnesspal.com/" target="_blank" rel="noopener" style="color:var(--bronze2);font-weight:600"><!-- WILL: replace this href with [WILL'S MYFITNESSPAL REFERRAL LINK] -->MyFitnessPal</a> for tracking</li>
+          <li>Optional 8 hour eating window if fasting helps you stay on plan</li>
+        </ul>
+      </div>
+
+      <div class="card rule">
+        <div class="big">90/10<small>or 80/20</small></div>
+        <div>
+          <h3>You don't cheat on your diet.</h3>
+          <p>Enjoy date night with your wife and ice cream with your kids. 80 to 90% of what you eat supports your goals. The rest is for the foods you love, with control. Pizza night doesn't have to become pizza, ice cream and candy night. Slip up? Get right back on track as if nothing happened.</p>
+        </div>
+      </div>
+    </div>
+    <p class="nut-note">The full member starter pack, with meal examples and Will's grocery list, comes when you join. Not medical advice. Check with your doctor before big diet changes.</p>
+  </div>
+</section>
+
+<section id="will">
+  <div class="wrap will-grid">
+    <div class="will-card">
+      <img class="photo" src="will-carter.jpg" alt="Will Carter with his wife and three kids" width="800" height="1000" loading="lazy" />
+      <div class="will-meta">
+        <h3>Will Carter</h3>
+        <a class="handle" href="https://www.instagram.com/willcarternlf/" target="_blank" rel="noopener">@willcarternlf</a>
+        <ul class="creds">
+          <li><span>/</span>Husband and father of three</li>
+          <li><span>/</span>Owner, No Limits Fitness (Monroe NC)</li>
+          <li><span>/</span>Pro natural OCB bodybuilder</li>
+          <li><span>/</span>Show promoter and judge</li>
+        </ul>
+      </div>
+    </div>
+    <div class="will-copy">
+      <div class="eyebrow">Your coach</div>
+      <h2>A dad who lives it.</h2>
+      <p class="lead" style="margin-top:18px">Will runs a gym, preps for shows, and raises three kids. He knows the season of life you're in, because he's in it too.</p>
+      <p>Online on purpose. No commute. No matching gym hours. A clear plan, direct coaching, and men who keep each other honest.</p>
+      <div class="quote">"This isn't about perfection. It's about understanding the season of life you're in and doing what you can, where you are, with what you have. Iron sharpens Iron."</div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" id="proof">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why it works</div>
+      <h2>Built for men who already have a full life.</h2>
+      <p class="lead">It's not about how hard you can go for a short period of time. It's about the consistency you can apply for weeks and months on end.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="card pillar"><div class="line"></div><h3>Accountability</h3><p>Weekly weigh-ins, pictures and compliance to the plan, sent to Will. When you go quiet, the group notices.</p></div>
+      <div class="card pillar"><div class="line"></div><h3>Brotherhood</h3><p>Share wins, struggles and proud moments. Not a competition. We work together so everyone makes great progress.</p></div>
+      <div class="card pillar"><div class="line"></div><h3>Family first</h3><p>The mission is to be the best version of yourself for your family. Train around them, not instead of them.</p></div>
+    </div>
+
+    <div class="kids">
+      <h3>Train so your kids have to work to beat dad.</h3>
+      <p>At the end of the 4 weeks we have a group session, and you can bring your kids (as long as they're old enough to work out safely).</p>
+    </div>
+  </div>
+</section>
+
+<section id="straight-talk">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Straight talk</div>
+      <h2>What this is. What it isn't.</h2>
+      <p class="lead">A focused group program at $39. Built for the busy season you're in.</p>
+    </div>
+    <div class="talk-grid">
+      <div class="card talk yes">
+        <h3>You get</h3>
+        <ul>
+          <li><i>+</i>3 full body workouts a week in TrainHeroic</li>
+          <li><i>+</i>Simple nutrition targets, and macros from Will when you're ready</li>
+          <li><i>+</i>Weekly check-ins and feedback from Will</li>
+          <li><i>+</i>Member starter pack: training, nutrition and grocery list</li>
+        </ul>
+      </div>
+      <div class="card talk no">
+        <h3>You do not get</h3>
+        <ul>
+          <li><i>-</i>One-on-one contest prep</li>
+          <li><i>-</i>A strict meal template you must follow word for word</li>
+          <li><i>-</i>A short term fix. Eating for health is a lifestyle</li>
+          <li><i>-</i>Medical advice</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="join">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Join</div>
+      <h2>Start this week.</h2>
+      <p class="lead">Same program on both plans. Nutrition included. DM to get in.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="pname">Monthly</div>
+        <div class="amt">$39<small> / month</small></div>
+        <div class="sub">Cancel anytime. Join any week.</div>
+        <ul>
+          <li>3 full body workouts a week in TrainHeroic</li>
+          <li>Nutrition protocol included</li>
+          <li>WhatsApp group + weekly check-ins</li>
+          <li>Monthly Zoom with Will</li>
+          <li>Member starter pack PDF</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">DM to join</a>
+      </div>
+      <div class="plan best">
+        <div class="ribbon">Best value</div>
+        <div class="pname">Yearly</div>
+        <div class="amt">$349<small> / year</small></div>
+        <div class="sub">About $29/month. Save $119.</div>
+        <ul>
+          <li>Everything in monthly</li>
+          <li>One payment for the year</li>
+          <li>Best if you are committing for real</li>
+        </ul>
+        <a class="btn btn-primary" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">DM to join</a>
+      </div>
+    </div>
+    <p class="fine">Know a dad who needs this? <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_nV7lbEJ4fhs09ZAhyD1bc0Js6bmoJ1rfu8Fh5YhcCjiDRQ/viewform" target="_blank" rel="noopener">Refer him</a>. When he joins, you get a free month.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <img src="logo-web.jpg" alt="Forged Fathers logo" width="120" height="120" />
+      <div>
+        <div class="t">Forged Fathers</div>
+        <p>Strength, nutrition and brotherhood for dads. Led by Will Carter. Iron sharpens Iron.</p>
+      </div>
+      <div class="fl">
+        <a href="#program">Program</a>
+        <a href="#nutrition">Nutrition</a>
+        <a href="#join">Pricing</a>
+        <a class="ig" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener" aria-label="Forged Fathers on Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm.2 2C6 4 4 6 4 8v8c0 2 2 4 4 4h8c2 0 4-2 4-4V8c0-2-2-4-4-4H8zm9.05 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          <span>@weareforgedfathers</span>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_nV7lbEJ4fhs09ZAhyD1bc0Js6bmoJ1rfu8Fh5YhcCjiDRQ/viewform" target="_blank" rel="noopener">Refer a dad</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 Forged Fathers. weareforgedfathers.</span>
+      <span>Not medical advice. Results vary with effort and consistency.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
